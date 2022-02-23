@@ -1,0 +1,134 @@
+---
+title: "Quiz 1"
+author: "Your Name Here"
+date: 'Last compiled: `r format(Sys.time(), "%B %d, %Y at %X")`'
+output: bookdown::html_document2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE, fig.align = "center")
+library(scales)
+```
+
+__________
+
+**Note: By committing and pushing this Quiz to the class repository you are acknowledging the all work is your own accept as noted in your acknowledgement statement at the end of the document.  Please commit and push your work to the class repository no later than 4:00 pm, Thursday March 3, 2022. **
+
+____________
+
+
+1. Load the `tidyverse` and `fst` packages.
+
+```{r}
+# Your Code Here
+
+```
+
+_______
+
+2. Read into R the data set `late_shipments.fst` stored in the `data` directory using the `read.fst()` function and store the results in `late_shipments`.
+
+```{r}
+# Your Code Here
+
+```
+
+__________
+
+3. Create a subset of `late_shipments` named `late_shipments_air` where the `shipment_mode` was `"Air"` and the `country` was `"Vietnam"`.  The dimensions of `late_shipments_air` should be 135 by 26.  Use `late_shipments_air` for all subsequent questions.
+
+```{r}
+# Your Code Here
+
+```
+
+__________
+
+4. Create a scatterplot of `freight_cost_usd` versus `weight_kilograms` mapping `sub_classification` to `color` using the `late_shipments_air` data frame.  Superimpose least squares regression lines on the scatterplot.
+
+```{r, label = "q4", fig.cap = "Scatterplot of Freight Cost in USD versus Weight (Kilograms)"}
+# Your Code Here
+
+```
+
+___________
+
+5.  Based on scatterplot created in Figure \@ref(fig:q4), do you think it is appropriate to use a parallel slopes model or and additive model?  Please explain your rationale.
+
+**Your answer here**
+
+_____________
+
+6. Create histograms of `freight_cost_usd` by `sub_classification` such that the histogram for `Adult` is displayed on top of the histogram for `Pediatric`. Set the `binwidth` to 500 and use your favorite color for the `fill` argument. (Hint: `facet_grid()`)
+
+```{r, label = "q6", fig.cap = "Histograms of freight cost in US dollars"}
+# Your Code Here
+
+```
+
+___________
+
+7.  Characterize the distribution of `freight_cost_usd` for `Adult`.
+
+
+```{r}
+# Your Code Here
+
+```
+
+**Your answer here: **
+
+_______________
+
+8.  Create a parallel slopes model for regressing `freight_cost_usd` on to `weight_kilograms` for the different levels in `sub_classification`.  Store the result in `mod_ps`.  Report and interpret the slope of the model.  What is the model's $y-$intercept for `Pediatric` shipments?  
+
+```{r}
+# Your Code Here
+
+```
+
+**Your answer here: **
+
+_________
+
+9.  Given that 8% of all shipments from Vietnam are late, what is the probability at least 90% of the next $n = 500$ shipments will be on time?  
+  *  Define your random variable and specify its distribution before writing a mathematical statement and showing the code you use to obtain an answer.
+  * What is expected value and standard deviation of your random variable?
+
+**Your answers here: **
+
+  * 
+  * 
+  * 
+  * 
+
+```{r}
+# Your code here
+
+```
+
+____________
+
+10. A gambler has in his pocket a fair coin and a two-headed coin.  He selects one of the coins at random; when he flips it, it shows heads.  What is the probability it is the fair coin?
+
+**Your Answer Here: **
+
+_________
+
+11. A coin is tossed 25 times.  Let $x=$ the number of tosses that result in heads ($H$).  Consider the following rule for deciding whether or not the coin is fair.  Judge the coin to be fair if $8\leq X \leq 17$.  Judge the coin to be biased if either $X \leq 7$ or $X \geq 18$.
+
+* What is the probability of judging the coin to be biased when it is actually fair? **Your Answer Here**
+
+```{r}
+# Your Code Here
+
+```
+
+
+
+
+_____________
+
+**Acknowledegemnt Statement:  All work on this quiz is entirely my own.**
+
+____________
