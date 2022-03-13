@@ -8,6 +8,7 @@ output: bookdown::html_document2
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE, fig.align = "center")
 library(scales)
+library(ggplot2)
 ```
 
 __________
@@ -35,7 +36,7 @@ _______
 
 __________
 
-3. Create a subset of `late_shipments` named `late_shipments_air` where the `shipment_mode` was `"Air"` and the `country` was `"Vietnam"`.  The dimensions of `late_shipments_air` should be 135 by 26.  Use `late_shipments_air` for all subsequent questions.
+3. Create a subset of `late_shipments` named `late_shipments_air` where the `shipment_mode` is `"Air"` and the `country` is `"Vietnam"`.  The dimensions of `late_shipments_air` should be 135 by 26.  Use `late_shipments_air` for all subsequent questions.
 
 ```{r}
 # Your Code Here
@@ -48,12 +49,12 @@ __________
 
 ```{r, label = "q4", fig.cap = "Scatterplot of Freight Cost in USD versus Weight (Kilograms)"}
 # Your Code Here
-plot(1, 1)
+ggplot(data = cars) # replace with appropriate tibble and arguments
 ```
 
 ___________
 
-5.  Based on scatterplot created in Figure \@ref(fig:q4), do you think it is appropriate to use a parallel slopes model or and additive model?  Please explain your rationale.
+5.  Based on scatterplot created in Figure \@ref(fig:q4), do you think it is appropriate to use a parallel slopes model or a non-additive (interaction) model?  Please explain your rationale.
 
 **Your answer here**
 
